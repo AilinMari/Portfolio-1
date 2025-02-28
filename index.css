@@ -1,6 +1,5 @@
 body {
   background-color: black;
-  color: white;
 }
 
 main {
@@ -33,6 +32,7 @@ main {
 #logo {
   position: relative;
   max-width: fit-content;
+  color: white;
 }
 
 .logo-letters {
@@ -46,19 +46,25 @@ h1 {
   font-size: 5rem;
   font-family: "Athiti";
   font-weight: 500;
-  color: #fff;
 }
 
 h3 {
   font-size: 1.8rem;
-  font-family: "Raleway";
-  font-weight: 500;
-  color: #fff;
+  font-family: "Athiti";
+  font-weight: 600;
+  line-height: 1;
 }
 
 h1 {
   font-size: 2.8rem;
   margin: 0 0 0 1rem;
+}
+
+.live-link a,
+.repo-link a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .profile-text p {
@@ -67,6 +73,7 @@ h1 {
   font-weight: 400;
   margin: -5rem 0 3rem 0;
   max-width: 500px;
+  color: white;
 }
 .top-bar {
   display: flex;
@@ -86,6 +93,7 @@ h1 {
   font-family: "Raleway";
   font-size: 1.2rem;
   font-weight: 600;
+  font-style: italic;
 }
 
 .content-text {
@@ -100,30 +108,79 @@ h1 {
 }
 
 .grid-projects {
-  border: #ff95f6 2px solid;
-  border-radius: 5px;
-  padding: 20px; /* Adjust padding to shrink the container */
+  /* border: #ff95f6 2px solid;
+  border-radius: 20px; */
+  padding: 0; /* Remove padding to fit the image */
   position: relative;
   overflow: hidden;
   height: auto; /* Adjust height to fit content */
-  width: 500px; /* Increase the fixed width */
+  width: 35rem; /* Increase the fixed width */
 }
 
-.grid-projects .content-text,
 .grid-projects .image {
-  display: none;
-}
-
-.grid-projects:hover .content-text,
-.grid-projects:hover .image {
-  display: block; /* Show content on hover */
-  opacity: 1;
-}
-
-.image {
   width: 100%;
   position: relative;
-  border-radius: 5px;
+  border-radius: 20px;
+  transition: opacity 0.5s ease;
+}
+
+.grid-projects h3 {
+  position: absolute;
+  top: 10px; /* Position h3 at the top */
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.5s ease;
+  text-align: center;
+  z-index: 2;
+  width: 90%; /* Ensure text doesn't overflow */
+}
+
+.grid-projects .second-description {
+  position: absolute;
+  top: 4rem; /* Position second-description below h3 */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  z-index: 2;
+  width: 90%; /* Ensure text doesn't overflow */
+}
+
+.grid-projects .content-text {
+  position: absolute;
+  bottom: 10px; /* Position content-text at the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  z-index: 2;
+  padding: 1rem;
+  width: 90%; /* Ensure text doesn't overflow */
+}
+
+.grid-projects .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.281),
+    rgb(255, 149, 246)
+  ); 
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.grid-projects:hover .overlay,
+.grid-projects:hover .content-text,
+.grid-projects:hover h3,
+.grid-projects:hover .second-description {
+  opacity: 1;
 }
