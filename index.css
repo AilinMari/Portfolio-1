@@ -53,6 +53,7 @@ h3 {
   font-family: "Athiti";
   font-weight: 600;
   line-height: 1;
+
 }
 
 h1 {
@@ -62,9 +63,31 @@ h1 {
 
 .live-link a,
 .repo-link a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: 500;
+  border: #a10094 9px solid;
+  border-radius: 20px;
+  background-color: #a10094;
+}
+
+.live-link a:hover,
+.repo-link a:hover {
+    background-color: #ff95f6;
+    border: #ff95f6 9px solid;
+    color: black;
+    }
+
+    .live-link a:active,
+.repo-link a:active{
+    background-color: #ff95f6;
+    border: #a10094 4px solid;
+    padding: 5px;
+    color: black;
+}
+
+.repo-link {
+    margin: 1.5rem;
 }
 
 .profile-text p {
@@ -138,7 +161,7 @@ h1 {
 
 .grid-projects .second-description {
   position: absolute;
-  top: 4rem; /* Position second-description below h3 */
+  top: 3rem; /* Position second-description below h3 */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
