@@ -21,3 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Change element every 2 seconds automatically
     setInterval(() => changeElement(1), 2000);
 });
+
+
+
