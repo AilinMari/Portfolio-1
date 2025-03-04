@@ -19,5 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Change element every 2 seconds automatically
-  setInterval(() => changeElement(1), 2000);
+  setInterval(() => changeElement(1), 1500);
+
+  // Handle click events for grid-projects on small screens
+  const gridProjects = document.querySelectorAll(".grid-projects");
+  gridProjects.forEach((project) => {
+    project.addEventListener("click", () => {
+      if (window.innerWidth <= 1000) {
+        // Remove active class from all other projects
+        gridProjects.forEach((p) => p.classList.remove("active"));
+        // Toggle active class on the clicked project
+        project.classList.toggle("active");
+      }
+    });
+  });
 });

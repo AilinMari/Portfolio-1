@@ -128,7 +128,6 @@ h1 {
   transition: opacity 0.9s ease;
 }
 
-
 .grid-projects {
   padding: 0;
   position: relative;
@@ -213,4 +212,36 @@ h1 {
 .grid-projects:hover h3,
 .grid-projects:hover .second-description {
   opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .full-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-projects:hover {
+    transform: none; /* Disable pop-out effect on hover for small screens */
+    box-shadow: none; /* Disable glow effect on hover for small screens */
+  }
+
+  .grid-projects:hover .overlay,
+  .grid-projects:hover .content-text,
+  .grid-projects:hover h3,
+  .grid-projects:hover .second-description {
+    opacity: 0; /* Disable overlay and text on hover for small screens */
+  }
+
+  .grid-projects.active {
+    box-shadow: 0 0 20px rgba(255, 149, 246, 1);
+    border-radius: 20px;
+    transform: scale(1.05); /* Add pop-out effect on click */
+    z-index: 10; /* Bring to front on click */
+  }
+
+  .grid-projects.active .overlay,
+  .grid-projects.active .content-text,
+  .grid-projects.active h3,
+  .grid-projects.active .second-description {
+    opacity: 1;
+  }
 }
