@@ -24,13 +24,40 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle click events for grid-projects on small screens
   const gridProjects = document.querySelectorAll(".grid-projects");
   gridProjects.forEach((project) => {
-    project.addEventListener("click", () => {
+    project.addEventListener("click", (event) => {
       if (window.innerWidth <= 1000) {
         // Remove active class from all other projects
         gridProjects.forEach((p) => p.classList.remove("active"));
         // Toggle active class on the clicked project
         project.classList.toggle("active");
+        // Prevent the click event from propagating to the document
+        event.stopPropagation();
       }
     });
+  });
+
+  // Handle click events outside of grid-projects to remove active class
+  document.addEventListener("click", () => {
+    if (window.innerWidth <= 1000) {
+      gridProjects.forEach((project) => project.classList.remove("active"));
+    }
+  });
+
+  // Custom cursor functionality
+  const cursor = document.createElement("div");
+  cursor.classList.add("custom-cursor");
+  document.body.appendChild(cursor);
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+  });
+
+  document.addEventListener("mousedown", () => {
+    cursor.classList.add("active");
+  });
+
+  document.addEventListener("mouseup", () => {
+    cursor.classList.remove("active");
   });
 });

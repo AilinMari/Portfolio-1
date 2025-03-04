@@ -1,5 +1,24 @@
 body {
   background-color: black;
+  cursor: none; /* Hide the default cursor */
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 149, 246, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.1s ease;
+  box-shadow: 0 0 10px rgba(255, 149, 246, 0.8),
+    0 0 20px rgba(255, 149, 246, 0.6), 0 0 30px rgba(255, 149, 246, 0.4);
+}
+
+.custom-cursor.active {
+  transform: scale(1.5);
 }
 
 main {
@@ -15,7 +34,7 @@ main {
   top: -50%;
   left: 0;
   border: 4px solid #ff95f6;
-  width: 100px; /* Fixed width */
+  width: 100px;
   height: 100px; /* Fixed height */
   border-radius: 50%;
   display: flex;
@@ -222,6 +241,7 @@ h1 {
   .grid-projects:hover {
     transform: none; /* Disable pop-out effect on hover for small screens */
     box-shadow: none; /* Disable glow effect on hover for small screens */
+    z-index: 0;
   }
 
   .grid-projects:hover .overlay,
