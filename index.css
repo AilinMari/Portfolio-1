@@ -244,4 +244,11 @@ h1 {
   .grid-projects.active .second-description {
     opacity: 1;
   }
+
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    margin: 5rem 0 5rem 0;
+  }
 }
