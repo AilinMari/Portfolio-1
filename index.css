@@ -22,11 +22,13 @@ main {
   align-items: center;
   justify-content: center;
   opacity: 0; /* Start with hidden elements */
-  transition: opacity 1s ease; /* Add transition for opacity */
+  transition: opacity 1s ease, box-shadow 1s ease; /* Add transition for opacity and box-shadow */
+  box-shadow: 0 0 20px rgba(255, 149, 246, 0.8); /* Add glow effect */
 }
 
 .logo-letters h2.visible {
   opacity: 1; /* Make the visible element fully opaque */
+  box-shadow: 0 0 20px rgba(255, 149, 246, 1); /* Enhance glow effect when visible */
 }
 
 #logo {
@@ -53,7 +55,6 @@ h3 {
   font-family: "Athiti";
   font-weight: 600;
   line-height: 1;
-
 }
 
 h1 {
@@ -73,21 +74,21 @@ h1 {
 
 .live-link a:hover,
 .repo-link a:hover {
-    background-color: #ff95f6;
-    border: #ff95f6 9px solid;
-    color: black;
-    }
+  background-color: #ff95f6;
+  border: #ff95f6 9px solid;
+  color: black;
+}
 
-    .live-link a:active,
-.repo-link a:active{
-    background-color: #ff95f6;
-    border: #a10094 4px solid;
-    padding: 5px;
-    color: black;
+.live-link a:active,
+.repo-link a:active {
+  background-color: #ff95f6;
+  border: #a10094 4px solid;
+  padding: 5px;
+  color: black;
 }
 
 .repo-link {
-    margin: 1.5rem;
+  margin: 1.5rem;
 }
 
 .profile-text p {
@@ -131,13 +132,14 @@ h1 {
 }
 
 .grid-projects {
-  /* border: #ff95f6 2px solid;
-  border-radius: 20px; */
-  padding: 0; /* Remove padding to fit the image */
+  padding: 0;
   position: relative;
   overflow: hidden;
-  height: auto; /* Adjust height to fit content */
-  width: 35rem; /* Increase the fixed width */
+  height: auto;
+  width: 35rem;
+  transition: box-shadow 0.5s ease, transform 0.5s ease, z-index 0s; /* Add transition for box-shadow, transform, and z-index */
+  border-radius: 20px;
+  z-index: 1; /* Default z-index */
 }
 
 .grid-projects .image {
@@ -194,11 +196,18 @@ h1 {
     to bottom,
     rgba(255, 255, 255, 0.281),
     rgb(255, 149, 246)
-  ); 
+  );
   border-radius: 20px;
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 1;
+}
+
+.grid-projects:hover {
+  box-shadow: 0 0 20px rgba(255, 149, 246, 1);
+  border-radius: 20px;
+  transform: scale(1.05); /* Add pop-out effect */
+  z-index: 10; /* Bring to front on hover */
 }
 
 .grid-projects:hover .overlay,
