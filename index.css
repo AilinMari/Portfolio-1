@@ -22,7 +22,7 @@ body {
 }
 
 main {
-  margin: 3rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,17 +112,17 @@ h1 {
 }
 
 .profile-text p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Athiti";
   font-weight: 400;
   margin: -5rem 0 0 0;
-  max-width: 500px;
+  max-width: 50rem;
   color: white;
 }
 .top-bar {
   display: flex;
   justify-content: flex-end;
-  margin: 0 0 5rem 6rem;
+  margin: 0 0 5rem 7rem;
   gap: 2rem;
 }
 
@@ -152,7 +152,7 @@ h1 {
   position: relative;
   overflow: hidden;
   height: auto;
-  width: 35rem;
+  max-width: 35rem;
   transition: box-shadow 0.5s ease, transform 0.5s ease, z-index 0s; /* Add transition for box-shadow, transform, and z-index */
   border-radius: 20px;
   z-index: 1; /* Default z-index */
@@ -236,6 +236,10 @@ h1 {
 @media (max-width: 1000px) {
   .full-grid {
     grid-template-columns: 1fr;
+  }
+
+  .grid-projects {
+    max-width: 45rem;
   }
 
   .grid-projects:hover {
