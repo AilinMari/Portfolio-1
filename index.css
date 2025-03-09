@@ -1,6 +1,7 @@
 body {
   background-color: black;
   cursor: none; /* Hide the default cursor */
+  justify-content: center;
 }
 
 /* Custom cursor styles */
@@ -79,6 +80,12 @@ h3 {
   line-height: 1;
 }
 
+footer h3 {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
 h1 {
   font-size: 2.8rem;
   margin: 0 0 0 1rem;
@@ -118,15 +125,26 @@ h1 {
   font-size: 1.5rem;
   font-family: "Athiti";
   font-weight: 400;
-  margin: -5rem 0 0 0;
+  margin: 0 0 0 0;
   max-width: 50rem;
   color: white;
 }
+
+.profile-pic img {
+  max-height: 30rem;
+  border-radius: 50%;
+  border: 5px solid #ff95f6;
+  box-shadow: 0 0 20px rgba(255, 149, 246, 0.8);
+  margin: 0 2rem 5rem 0;
+}
+
 .top-bar {
   display: flex;
-  justify-content: flex-end;
-  margin: 0 0 5rem 7rem;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 0 0;
+  gap: 3rem;
+  max-width: 100rem;
 }
 
 .full-grid {
@@ -134,6 +152,7 @@ h1 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   max-width: 1400px;
+  margin: 5rem 0 0 0;
 }
 
 .second-description {
@@ -170,7 +189,7 @@ h1 {
 
 .grid-projects h3 {
   position: absolute;
-  top: 10px; /* Position h3 at the top */
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -180,28 +199,28 @@ h1 {
   width: 90%; /* Ensure text doesn't overflow */
 }
 
-.grid-projects .second-description {
+/* .grid-projects .second-description {
   position: absolute;
-  top: 3rem; /* Position second-description below h3 */
+  top: 3rem; 
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.5s ease;
   text-align: center;
   z-index: 2;
-  width: 90%; /* Ensure text doesn't overflow */
-}
+  width: 90%; 
+} */
 
 .grid-projects .content-text {
   position: absolute;
-  bottom: 10px; /* Position content-text at the bottom */
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.5s ease;
   text-align: center;
   z-index: 2;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   width: 90%; /* Ensure text doesn't overflow */
 }
 
@@ -234,6 +253,98 @@ h1 {
 .grid-projects:hover h3,
 .grid-projects:hover .second-description {
   opacity: 1;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0 0 0;
+  width: 100%;
+  color: white;
+}
+
+footer .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+footer .contact-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+}
+
+footer .work-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+footer .work-links a {
+  color: white;
+  font-weight: 500;
+  cursor: none;
+}
+
+footer p {
+  font-family: "Athiti";
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 2rem 0 0;
+}
+
+footer a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Athiti";
+}
+
+footer .contact-info a {
+  color: white;
+  font-weight: 500;
+  cursor: none;
+}
+
+footer .contact-info a:hover {
+  color: #ff95f6;
+}
+
+footer .line {
+  height: 1px;
+  background-color: #ff95f6;
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin: 5rem 0 5rem 0;
+  }
+
+  .top-bar {
+    gap: 1.5rem;
+  }
+
+  .profile-pic img {
+    margin: 2rem;
+  }
+  .grid-projects h3 {
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .repo-link {
+    margin: 0 0 1.5rem 0;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -272,10 +383,8 @@ h1 {
     opacity: 1;
   }
 
-  .top-bar {
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
-    margin: 5rem 0 5rem 0;
+  .profile-pic img {
+    max-height: 40rem;
+    margin: 0 0 2rem 0;
   }
 }
