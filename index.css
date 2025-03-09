@@ -305,8 +305,6 @@ footer a {
   cursor: none;
 }
 
-
-
 footer a:hover {
   color: #ff95f6;
 }
@@ -341,7 +339,13 @@ footer .line {
   .repo-link {
     margin: 0 0 1.5rem 0;
   }
+  .profile-text p {
+    font-size: 2rem;
+  }
 
+  .grid-projects p {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -351,7 +355,7 @@ footer .line {
 
   .grid-projects {
     max-width: 45rem;
-      margin: 3rem 0 0 0;
+    margin: 3rem 0 0 0;
   }
 
   .grid-projects h3 {
@@ -389,4 +393,6 @@ footer .line {
     max-height: 40rem;
     margin: 0 0 2rem 0;
   }
+
+
 }
