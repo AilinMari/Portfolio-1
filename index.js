@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gridProjects = document.querySelectorAll(".grid-projects");
   gridProjects.forEach((project) => {
     project.addEventListener("click", (event) => {
-      if (window.innerWidth <= 1000) {
+      if (window.innerWidth <= 1100) {
         // Remove active class from all other projects
         gridProjects.forEach((p) => p.classList.remove("active"));
         // Toggle active class on the clicked project
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Handle click events outside of grid-projects to remove active class
   document.addEventListener("click", () => {
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth <= 1100) {
       gridProjects.forEach((project) => project.classList.remove("active"));
     }
   });
