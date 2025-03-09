@@ -1,10 +1,9 @@
 body {
   background-color: black;
-  cursor: none; /* Hide the default cursor */
+  cursor: none;
   justify-content: center;
 }
 
-/* Custom cursor styles */
 .custom-cursor {
   position: fixed;
   width: 25px;
@@ -38,19 +37,19 @@ main {
   left: 0;
   border: 4px solid #ff95f6;
   width: 100px;
-  height: 100px; /* Fixed height */
+  height: 100px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Start with hidden elements */
-  transition: opacity 1s ease, box-shadow 1s ease; /* Add transition for opacity and box-shadow */
-  box-shadow: 0 0 20px rgba(255, 149, 246, 0.8); /* Add glow effect */
+  opacity: 0;
+  transition: opacity 1s ease, box-shadow 1s ease;
+  box-shadow: 0 0 20px rgba(255, 149, 246, 0.8);
 }
 
 .logo-letters h2.visible {
-  opacity: 1; /* Make the visible element fully opaque */
-  box-shadow: 0 0 20px rgba(255, 149, 246, 1); /* Enhance glow effect when visible */
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(255, 149, 246, 1);
 }
 
 #logo {
@@ -61,7 +60,7 @@ main {
 }
 
 .logo-letters {
-  position: relative; /* Set the container to relative positioning */
+  position: relative;
   width: 100px;
   height: 100px;
 }
@@ -78,12 +77,6 @@ h3 {
   font-family: "Athiti";
   font-weight: 600;
   line-height: 1;
-}
-
-footer h3 {
-  color: white;
-  display: flex;
-  justify-content: center;
 }
 
 h1 {
@@ -155,13 +148,6 @@ h1 {
   margin: 5rem 0 0 0;
 }
 
-/* .second-description {
-  font-family: "Raleway";
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-style: italic;
-} */
-
 .content-text {
   font-family: "Raleway";
   font-size: 1rem;
@@ -175,9 +161,9 @@ h1 {
   overflow: hidden;
   height: auto;
   max-width: 35rem;
-  transition: box-shadow 0.5s ease, transform 0.5s ease, z-index 0s; /* Add transition for box-shadow, transform, and z-index */
+  transition: box-shadow 0.5s ease, transform 0.5s ease, z-index 0s;
   border-radius: 20px;
-  z-index: 1; /* Default z-index */
+  z-index: 1;
   margin: 3rem 0 0 3rem;
 }
 
@@ -197,20 +183,8 @@ h1 {
   transition: opacity 0.5s ease;
   text-align: center;
   z-index: 2;
-  width: 90%; /* Ensure text doesn't overflow */
+  width: 90%;
 }
-
-/* .grid-projects .second-description {
-  position: absolute;
-  top: 3rem; 
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  text-align: center;
-  z-index: 2;
-  width: 90%; 
-} */
 
 .grid-projects .content-text {
   position: absolute;
@@ -222,7 +196,7 @@ h1 {
   text-align: center;
   z-index: 2;
   padding: 0 1rem 1rem 1rem;
-  width: 90%; /* Ensure text doesn't overflow */
+  width: 90%;
 }
 
 .grid-projects .overlay {
@@ -245,8 +219,8 @@ h1 {
 .grid-projects:hover {
   box-shadow: 0 0 20px rgba(255, 149, 246, 1);
   border-radius: 20px;
-  transform: scale(1.05); /* Add pop-out effect */
-  z-index: 10; /* Bring to front on hover */
+  transform: scale(1.05);
+  z-index: 10;
 }
 
 .grid-projects:hover .overlay,
@@ -256,37 +230,13 @@ h1 {
   opacity: 1;
 }
 
-footer {
+footer .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin: 10rem 0 0 0;
-  width: 100%;
+  align-items: center;
   color: white;
-}
-
-footer .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15rem;
-}
-
-footer .contact-info {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  justify-content: center;
-  text-align: start;
-}
-
-footer .work-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  text-align: start;
-  color: white;
+  margin: 0 0 3rem 0;
 }
 
 footer p {
@@ -296,17 +246,31 @@ footer p {
   margin: 0 2rem 0 0;
 }
 
-footer a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  font-family: "Raleway";
-  color: white;
-  font-weight: 500;
+footer .contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   cursor: none;
 }
 
-footer a:hover {
-  color: #ff95f6;
+footer .contact-icons img {
+  color: white;
+  text-decoration: none;
+  max-width: 5rem;
+  margin: 0 1rem 0 1rem;
+  border: #ff95f6 3px solid;
+  border-radius: 50%;
+}
+
+footer .contact-icons img:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+footer .contact-icons img:active {
+  box-shadow: 0 0 20px rgba(255, 149, 246, 1);
 }
 
 footer .line {
@@ -340,7 +304,7 @@ footer .line {
     margin: 0 0 1.5rem 0;
   }
   .profile-text p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .grid-projects p {
@@ -363,8 +327,8 @@ footer .line {
   }
 
   .grid-projects:hover {
-    transform: none; /* Disable pop-out effect on hover for small screens */
-    box-shadow: none; /* Disable glow effect on hover for small screens */
+    transform: none;
+    box-shadow: none;
     z-index: 0;
   }
 
@@ -372,14 +336,14 @@ footer .line {
   .grid-projects:hover .content-text,
   .grid-projects:hover h3,
   .grid-projects:hover .second-description {
-    opacity: 0; /* Disable overlay and text on hover for small screens */
+    opacity: 0;
   }
 
   .grid-projects.active {
     box-shadow: 0 0 20px rgba(255, 149, 246, 1);
     border-radius: 20px;
-    transform: scale(1.05); /* Add pop-out effect on click */
-    z-index: 10; /* Bring to front on click */
+    transform: scale(1.05); 
+    z-index: 10; 
   }
 
   .grid-projects.active .overlay,
@@ -394,23 +358,7 @@ footer .line {
     margin: 0 0 2rem 0;
   }
 
-  footer .content {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    margin: 2rem 0 2rem 0;
-  }
-
-  footer p,
-  footer a {
-    font-size: 2rem;
-  }
-
-  footer .content h3 {
-    font-size: 3.2rem;
-  }
   .content-text {
     font-size: 1.5rem;
   }
-
 }
