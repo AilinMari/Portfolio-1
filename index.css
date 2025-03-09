@@ -74,7 +74,7 @@ h1 {
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-family: "Athiti";
   font-weight: 600;
   line-height: 1;
@@ -155,12 +155,12 @@ h1 {
   margin: 5rem 0 0 0;
 }
 
-.second-description {
+/* .second-description {
   font-family: "Raleway";
   font-size: 1.2rem;
   font-weight: 600;
   font-style: italic;
-}
+} */
 
 .content-text {
   font-family: "Raleway";
@@ -178,6 +178,7 @@ h1 {
   transition: box-shadow 0.5s ease, transform 0.5s ease, z-index 0s; /* Add transition for box-shadow, transform, and z-index */
   border-radius: 20px;
   z-index: 1; /* Default z-index */
+  margin: 3rem 0 0 3rem;
 }
 
 .grid-projects .image {
@@ -260,7 +261,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 5rem 0 0 0;
+  margin: 10rem 0 0 0;
   width: 100%;
   color: white;
 }
@@ -268,7 +269,7 @@ footer {
 footer .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 15rem;
 }
 
 footer .contact-info {
@@ -284,14 +285,8 @@ footer .work-links {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: start;
   color: white;
-}
-
-footer .work-links a {
-  color: white;
-  font-weight: 500;
-  cursor: none;
 }
 
 footer p {
@@ -304,16 +299,15 @@ footer p {
 footer a {
   font-size: 1.1rem;
   font-weight: 500;
-  font-family: "Athiti";
-}
-
-footer .contact-info a {
+  font-family: "Raleway";
   color: white;
   font-weight: 500;
   cursor: none;
 }
 
-footer .contact-info a:hover {
+
+
+footer a:hover {
   color: #ff95f6;
 }
 
@@ -340,11 +334,16 @@ footer .line {
   }
   .grid-projects h3 {
     margin: 0.5rem 0 1rem 0;
+    font-size: 3rem;
+    top: 20%;
   }
 
   .repo-link {
     margin: 0 0 1.5rem 0;
   }
+
+
+
 }
 
 @media (max-width: 1000px) {
@@ -354,6 +353,8 @@ footer .line {
 
   .grid-projects {
     max-width: 45rem;
+      margin: 3rem 0 0 0;
+  
   }
 
   .grid-projects:hover {
